@@ -1,2 +1,11 @@
-<h1>Home#show</h1>
-<p>Find me in app/views/home/show.html.erb</p>
+<h1>Posts</h1>
+<% @posts.each do |post| %>
+	<%= post.content %>
+<% end -%>
+<h1>Link to image</h1>
+<p>
+<% @images.each do |image| %>
+	<%= image.url %>
+<% end -%>
+</p>
+
