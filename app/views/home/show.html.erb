@@ -1,11 +1,25 @@
 <h1>Posts</h1>
 <% @posts.each do |post| %>
-	<%= post.content %>
+	<ul>
+		<li><%= post.content %></li>
+	</ul>
 <% end -%>
+
 <h1>Link to image</h1>
 <p>
 <% @images.each do |image| %>
-	<%= image.url %>
+	<ul>
+		<li><%= image.url %></li>
+	</ul>
 <% end -%>
+</p>
+
+<h1>List of comments</h1>
+<p>
+	<% @comments.each do |comment| %>
+		<%= comment.content %>
+		<%= comment.commentable_type %>
+		<%= comment.commentable_id %>
+	<% end %>
 </p>
 
