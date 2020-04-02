@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @comment = @post.comments.new
   end
 
   # GET /posts/new
@@ -25,6 +26,8 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    redirect_to :back
+    #redirect_to @comment.commentable
 
     respond_to do |format|
       if @post.save
@@ -34,6 +37,7 @@ class PostsController < ApplicationController
         format.html { render :new }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
+     
     end
   end
 
