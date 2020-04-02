@@ -17,9 +17,15 @@
 <h1>List of comments</h1>
 <p>
 	<% @comments.each do |comment| %>
-		<%= comment.content %>
-		<%= comment.commentable_type %>
+	<ul>
+		<li>
+		Comment for: <%= comment.commentable_type %> id: 
 		<%= comment.commentable_id %>
+		</li>
+	</ul>
+	</br>
+		<%= comment.content %>
+	</br>
 	<% end %>
 </p>
 

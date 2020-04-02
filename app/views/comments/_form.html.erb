@@ -15,14 +15,10 @@
     <%= form.label :content %>
     <%= form.text_area :content %>
   </div>
-  <div class="field">
-    <%= form.label :commentable_type %>
-    <%= form.text_area :commentable_type %>
-  </div>
-  <div class="field">
-    <%= form.label :commentable_id %>
-    <%= form.text_area :commentable_id %>
-  </div>
+  
+    <%= form.hidden_field :commentable_type %>
+    <%= form.hidden_field :commentable_id %>
+  
   
 
   <div class="actions">
